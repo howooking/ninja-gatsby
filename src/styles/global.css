@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  background: hsla(318, 44%, 51%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(318, 44%, 51%, 1) 0%,
+    hsla(347, 94%, 48%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(318, 44%, 51%, 1) 0%,
+    hsla(347, 94%, 48%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(318, 44%, 51%, 1) 0%,
+    hsla(347, 94%, 48%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B94C98", endColorstr="#F0073B", GradientType=1 );
+}
