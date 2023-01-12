@@ -2,6 +2,9 @@
 title: "Building a serverless SaaS product"
 subtitle: "A full-stack SaaS project with authentication and payments."
 date: "2021-07-12"
+slug: "saas-starter-app"
+thumb: ../images/thumbs/skate.png
+featuredImg: ../images/featured/skate-banner.png
 ---
 
 The [SaaS (software as a service)](https://en.wikipedia.org/wiki/Software_as_a_service) model underpins many of today's successful new businesses. Knowing how to build one from start to finish is probably a useful addition to any software developer's skill set.

@@ -2,8 +2,12 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Button from "../components/Button";
 import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default function Homepage() {
+export default function Homepage({ data }) {
+  console.log(data.file);
+  const banner = getImage(data.file);
+
   return (
     <Layout>
       <div className="flex">
@@ -16,9 +20,19 @@ export default function Homepage() {
           <Button text={"My Portfolio Project"} to={"/projects"} />
         </section>
         <section className="w-[50%]">
-          <img src="/banner.png" alt="banner" />
+          <GatsbyImage image={banner} alt="banner" />
         </section>
       </div>
     </Layout>
   );
 }
+
+export const BannerQuery = graphql`
+  query BannerQuery {
+    file(relativePath: { eq: "banner.png" }) {
+      childImageSharp {
+        gatsbyImageData(width: 400, placeholder: BLURRED, formats: AUTO)
+      }
+    }
+  }
+`;

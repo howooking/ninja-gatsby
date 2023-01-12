@@ -9,14 +9,11 @@
  */
 module.exports = {
   plugins: [
+    `gatsby-transformer-remark`,
     "gatsby-plugin-postcss",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `notes`,
-        path: `${__dirname}/src/notes/`,
-      },
-    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,9 +21,17 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
   siteMetadata: {
     title: "Howooking",
     description: "Portfolio",
+    contact: "junsgk@gmail.com",
   },
 };
